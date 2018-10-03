@@ -1,0 +1,177 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[letterpaper]{article}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{times}
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+\usepackage[sc,osf]{mathpazo}
+
+% Set your name here
+\def\name{Ben Berger}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {economics, statistics, mathematics},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 8.5in},
+  left=1.0in,
+  top=1.25in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+  }
+}{
+  \end{list}
+}
+
+\begin{document}
+
+% Place name at left
+{\huge \name}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\vspace{0.25in}
+
+\begin{minipage}{0.45\linewidth}
+  \href{http://www.hks.harvard.edu/}{John F. Kennedy School of Government} \\
+  Harvard University \\
+  79 John F. Kennedy Street \\
+  Cambridge, MA 02138
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+  \begin{tabular}{ll}
+    Phone: & \bf (717) 602-2420 \\
+    Email: & \href{mailto:benjamin\_berger@hks.harvard.edu}{\bf benjamin\_berger@hks.harvard.edu} \\
+    Homepage: & \href{http://bberger94.github.io/}{\bf bberger94.github.io} \\
+  \end{tabular}
+\end{minipage}
+
+
+
+\section*{Education}
+
+\begin{itemize}
+  \item Ph.D. Public Policy, Harvard University, 2018 to Present \\
+  Expected Completion Date: May 2023
+
+  \item B.A. Economics and Mathematics, University of Miami, 2016 \\
+  \textit{Magna cum laude}
+\end{itemize}
+
+
+\section*{Employment}
+
+\begin{itemize}
+\item Harvard University and NBER, Research Assistant to Amitabh Chandra, 2016--2018.
+\item Research Intern, ICSC, 2015.
+\end{itemize}
+
+
+\section*{Publications}
+
+%\subsection*{Book Chapters}
+
+\begin{itemize}
+\item "The Orphan Drug Act at 35: An Outlook for the 21st Century." In Innovation Policy and the Economy, Volume 19. University of Chicago Press, 2018. \textit{(with Nick Bagley, Amitabh Chandra, Craig Garthwaite, and Ariel Dora Stern)}
+\end{itemize}
+
+\section*{Honors, Scholarships, and Fellowships:}
+\begin{itemize}
+\item Harvard Kennedy School Graduate Fellowship
+\item NSF Graduate Research Fellowship, Honorable Mention (2018)
+\end{itemize}
+
+\section*{Personal}
+
+\begin{itemize}
+\item Born July 17, 1994.
+\item United States Citizen.
+\end{itemize}
+
+
+
+
+%\subsection*{Journal Articles}
+%
+%\begin{itemize}
+%\item A General Mathematical Theory of Depreciation, 1929, {\it Journal
+%    of The American Statistical Association} 20, 340--353.
+%\item Differential Equations Subject to Error, 1927, {\it Journal of The
+%    American Statistical Association}.
+%\item Applications of the Theory of Error to the Interpretation of
+%  Trends (with H. Working), 1929, {\it Journal of the American
+%    Statistical Association}.
+%\end{itemize}
+%
+%\subsection*{Proceedings}
+%
+%\begin{itemize}
+%\item A generalized T-Test and measure of multivariate dispersion,
+%  Proc. Second Berkeley Symposium of Mathematical Statistics and
+%  Probability, 1951.
+%\end{itemize}
+
+
+
+\bigskip
+
+% Footer
+\begin{center}
+  \begin{footnotesize}
+    Last updated: \today \\
+    \href{\footerlink}{\texttt{\footerlink}}
+  \end{footnotesize}
+\end{center}
+
+\end{document}
