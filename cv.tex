@@ -11,14 +11,19 @@
 
 \documentclass[letterpaper]{article}
 
+\usepackage[T1]{fontenc}
+\usepackage{charter}
 \usepackage{hyperref}
 \usepackage{geometry}
-\usepackage{times}
+\usepackage{tabularx}
+\usepackage[compact, explicit]{titlesec}
+\usepackage{ulem}
+\usepackage{enumitem}
 
 % Comment the following lines to use the default Computer Modern font
 % instead of the Palatino font provided by the mathpazo package.
 % Remove the 'osf' bit if you don't like the old style figures.
-\usepackage[sc,osf]{mathpazo}
+%\usepackage[sc,osf]{mathpazo}
 
 % Set your name here
 \def\name{Ben Berger}
@@ -43,15 +48,36 @@
   top=1in
 }
 
+\pagenumbering{gobble}
+
+
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{#1}
+\titlespacing*{\section}{0pt}{*0}{0pt}
+\titleformat{\subsection}{\large}{\thesection}{1em}{\uline{#1}}
+\titlespacing*{\subsection}{0pt}{*0}{.25em}
+
+
 % Customize page headers
-\pagestyle{myheadings}
-\markright{\name}
-\thispagestyle{empty}
+%\pagestyle{myheadings}
+%\markright{\name}
+%\thispagestyle{empty}
 
 % Custom section fonts
-\usepackage{sectsty}
-\sectionfont{\rmfamily\mdseries\Large}
-\subsectionfont{\rmfamily\mdseries\itshape\large}
+%\usepackage{sectsty}
+%
+%\sectionfont{\rmfamily\bfseries\Large}
+%\subsectionfont{\underline\normalfont\fontfamily{phv}\bfseries}
+%
+%\renewcommand\section{\@startsection {section}{1}{\z@}%
+%	{-3.5ex \@plus -1ex \@minus -.2ex}%
+%	{2.3ex \@plus.2ex}%
+%	{\normalfont\Large\bfseries\SS@sectfont}}
+%\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+%	{-3.25ex\@plus -1ex \@minus -.2ex}%
+%	{1.5ex \@plus .2ex}%
+%	{\normalfont\large\bfseries\SS@subsectfont}}
+%\sectionfont{\bfseries} % <---- omitting \bfseries still gives bold font
+
 
 % Other possible font commands include:
 % \ttfamily for teletype,
@@ -63,24 +89,30 @@
 % Don't indent paragraphs.
 \setlength\parindent{0em}
 
+
+
+
+
 % Make lists without bullets
-\renewenvironment{itemize}{
-  \begin{list}{}{
-    \setlength{\leftmargin}{1.5em}
-  }
-}{
-  \end{list}
-}
+%\renewenvironment{itemize}{
+%  \begin{list}{}{
+%    \setlength{\leftmargin}{0em}
+%  }
+%}{
+%  \end{list}
+%}
+\setlist[itemize]{itemsep=0em, parsep=0pt, topsep=0pt, label={}, leftmargin=0em}
+
 
 \begin{document}
 
 % Place name at left
-{\huge \name}
+%{\huge \bf \name}
 
 % Alternatively, print name centered and bold:
-%\centerline{\huge \bf \name}
+\centerline{\huge \bf \name}
 
-\vspace{0.25in}
+\vspace{2em}
 
 \begin{minipage}{0.45\linewidth}
   \href{http://www.hks.harvard.edu/}{John F. Kennedy School of Government} \\
@@ -88,65 +120,71 @@
   79 John F. Kennedy Street \\
   Cambridge, MA 02138
 \end{minipage}
+%
 \begin{minipage}{0.45\linewidth}
   \begin{tabular}{ll}
-    Phone: & \bf (717) 602-2420 \\
     Email: & \href{mailto:benjamin\_berger@hks.harvard.edu}{\bf benjamin\_berger@hks.harvard.edu} \\
-    Homepage: & \href{http://ben-berger.com/}{\bf ben-berger.com} \\
+    Homepage: & \href{http://ben-berger.com/}{\bf ben-berger.com} 
   \end{tabular}
 \end{minipage}
 
-
+\vspace{.25em}
+\hrule
+\vspace{.5em}
 
 \section*{Education}
 
 \begin{itemize}
-  \item Ph.D. Public Policy, Harvard University, 2018 to Present \\
-  Expected Completion Date: May 2023
-
-  \item B.A. Economics and Mathematics, University of Miami, 2016 \\
-  \textit{Magna cum laude},  GPA: 3.92
+  \item Ph.D. in Public Policy, Harvard University, May 2024 (expected)
+  \item B.A. in Economics and Mathematics, University of Miami, \textit{magna cum laude}, 2016
 \end{itemize}
 
+\section*{Research Interests}
+Health Economics, Innovation, Industrial Organization 
 
-\section*{Employment}
-
-\begin{itemize}
-\item Harvard University and NBER, Research Assistant to Nicole Maestas, Summer 2019.
-\item Harvard University and NBER, Research Assistant to Amitabh Chandra, 2016--2018, Summer 2019.
-\item Research Intern, ICSC, Summer 2015.
-\end{itemize}
-
+\section*{Research Experience}
+\begin{tabularx}{\linewidth}{@{} l X }
+	05/2019 -- 08/2019 & Graduate Research Assistant to Amitabh Chandra, Harvard Kennedy School \\
+	05/2019 -- 08/2019 & Graduate Research Assistant to Nicole Maestas, Harvard Medical School \\
+	07/2016 -- 08/2018 & Full-Time Research Assistant to Amitabh Chandra, National Bureau of Economic Research \\
+	06/2015 -- 08/2015 & Research Intern, International Council of Shopping Centers \\
+	01/2015 -- 06/2015 & Undergraduate Research Assistant to Chris Parmeter, University of Miami
+\end{tabularx} \\
 
 \section*{Publications}
+\subsection*{Working Papers}
+\begin{itemize}
+	\item ``Regulatory Approval and Expanded Market Size.'' NBER Working Paper, 2021. \textit{(with Amitabh Chandra and Craig Garthwaite).}
+\end{itemize}
 
 \subsection*{Book Chapters}
-
 \begin{itemize}
 	\item ``The Link Between Health and Working Longer: Disparities in Work Capacity.'' In Overtime: America's Aging Workforce and the Future of ``Working Longer''. The Alfred P. Sloan Foundation, Forthcoming. \textit{(with Nicole Maestas).}
 	
 	\item ``The Orphan Drug Act at 35: An Outlook for the 21st Century.'' In Innovation Policy and the Economy, Volume 19. University of Chicago Press, 2018. \textit{(with Nicholas Bagley, Amitabh Chandra, Craig Garthwaite, and Ariel Dora Stern).}
 \end{itemize}
 
-\subsection*{In Preparation}
-\begin{itemize}
-	\item ``Information, Learning, and Regulation in Pharmaceutical Markets.'' \textit{(with Amitabh Chandra and Craig Garthwaite).}
-	
-	\item ``Tax Reform and the (In)elasticty of Pharmaceutical R\&D: Evidence from Orphan Drugs.''
-\end{itemize}
+\section*{Teaching Experience}
+\begin{tabularx}{\linewidth}{@{}l X}
+	Spring 2021 & Empirical Methods II, Master's Level, Harvard Kennedy School \\ & Overall Effectiveness: 4.61/5 (average among TFs: 4.42)\\
+	& Teaching Fellow for Teddy Svoronos \\
+	& Selected feedback: \textit{I can't believe this is Ben's first time teaching --- he's incredibly good at it and I hope he continues for a long time!} \\
+	& \textit{Ben is wonderful --- he is so helpful and takes a lot of time to make sure that you understand difficult concepts and that he answers questions clearly and comprehensively.}
+\end{tabularx}
 
-\section*{Honors, Scholarships, and Fellowships:}
+
+\section*{Fellowships and Scholarships}
 \begin{itemize}
 	\item NSF Graduate Research Fellowship, Awarded (2019).
 	\item NSF Graduate Research Fellowship, Honorable Mention (2018).
 	\item Dickinson Merit Scholarship, University of Miami, Awarded (2012).
 \end{itemize}
 
-%\section*{Personal}
+\section*{Personal}
 %
 %\begin{itemize}
 %\item Born July 17, 1994.
-%\item United States Citizen.
+United States Citizen
 %\end{itemize}
 
 
